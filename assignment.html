@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY week six Interactive Assignment Page</title>
+  <LInk rel="style" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f9;
+    }
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #575757;
+    }
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #45a049;
+    }
+    details {
+      margin: 10px 0;
+    }
+    .counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 200px;
+      margin-top: 10px;
+    }
+    .counter button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .counter button:hover {
+      background: #45a049;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Interactive Web Page Thanks PLP</h1>
+    <p>A simple structured page with interactive features</p>
+  </header>
+
+  <nav>
+    <a href="#contact-form">Contact</a>
+    <a href="#faq">FAQ</a>
+    <a href="#counter">Counter</a>
+  </nav>
+
+  <main>
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+      <h2>Contact Us</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5"></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>What is this site about?</summary>
+        <p>This is a demo page with structured layout and interactive sections.</p>
+      </details>
+      <details>
+        <summary>How can I contact you?</summary>
+        <p>You can use the contact form above to send us a message.</p>
+      </details>
+      <details>
+        <summary>Is this mobile friendly?</summary>
+        <p>Yes! The page layout adapts to different screen sizes.</p>
+      </details>
+    </section>
+
+    <!-- Interactive Counter Section -->
+    <section id="counter">
+      <h2>Interactive Counter</h2>
+      <div class="counter">
+        <button onclick="decrement()">-</button>
+        <span id="count">0</span>
+        <button onclick="increment()">+</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Interactive Page</p>
+  </footer>
+
+  <script>
+    let count = 0;
+    const countDisplay = document.getElementById('count');
+
+    function increment() {
+      count++;
+      countDisplay.textContent = count;
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        countDisplay.textContent = count;
+      }
+    }
+  </script>
+</body>
+</html>
